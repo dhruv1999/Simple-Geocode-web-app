@@ -3,6 +3,6 @@ const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
-const port=2000;
 
-app.listen(port,()=> console.log(`server started on port  ${port}`));
+const PORT = process.env.PORT || 2000;
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
